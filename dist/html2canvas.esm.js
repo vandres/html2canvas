@@ -5118,7 +5118,7 @@ var DocumentCloner = /** @class */ (function () {
     };
     // custom elements are cloned as divs so the renderer knows how to render them
     DocumentCloner.prototype.createCustomElementClone = function (node) {
-        var customDiv = document.createElement('div');
+        var customDiv = document.createElement('span');
         if (typeof node.getAttributeNames === 'function') {
             var attrNames = node.getAttributeNames();
             for (var i = 0; i < attrNames.length; i += 1) {
