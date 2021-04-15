@@ -147,7 +147,7 @@ export class DocumentCloner {
 
     // custom elements are cloned as divs so the renderer knows how to render them
     createCustomElementClone(node: HTMLElement): HTMLElement {
-        let customDiv = document.createElement('div');
+        let customDiv = document.createElement('span');
         if (typeof node.getAttributeNames === 'function') {
             let attrNames = node.getAttributeNames();
             for (let i = 0; i < attrNames.length; i += 1) {
